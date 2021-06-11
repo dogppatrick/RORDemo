@@ -12,7 +12,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.contex %></td>
+        <td><%= truncate(post.contex, :length => 35, :omission => "" , :escape => false) %></td>
         <td><%= post.date %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
